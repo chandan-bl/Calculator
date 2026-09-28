@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="calc.css">
+</head>
+<body>
+<main class="desk">
+  <section class="machine" aria-label="Calculator">
+    <div class="brand"><b>CALCULATOR</b><span>12-digit</span></div>
+
+    <div class="screen">
+      <div class="expr" id="expr" aria-hidden="true">&nbsp;</div>
+      <div class="out" id="out" role="status" aria-live="polite" aria-label="Result">0</div>
+    </div>
+
+    <div class="pad" id="pad">
+      <button class="key fn" data-action="clear">C</button>
+      <button class="key fn" data-action="back" aria-label="Backspace">←</button>
+      <button class="key fn" data-action="percent">%</button>
+      <button class="key op" data-op="÷" aria-pressed="false">÷</button>
+
+      <button class="key" data-digit="7">7</button>
+      <button class="key" data-digit="8">8</button>
+      <button class="key" data-digit="9">9</button>
+      <button class="key op" data-op="×" aria-pressed="false">×</button>
+
+      <button class="key" data-digit="4">4</button>
+      <button class="key" data-digit="5">5</button>
+      <button class="key" data-digit="6">6</button>
+      <button class="key op" data-op="−" aria-pressed="false">−</button>
+
+      <button class="key" data-digit="1">1</button>
+      <button class="key" data-digit="2">2</button>
+      <button class="key" data-digit="3">3</button>
+      <button class="key op" data-op="+" aria-pressed="false">+</button>
+
+      <button class="key fn" data-action="sign" aria-label="Change sign">±</button>
+      <button class="key" data-digit="0">0</button>
+      <button class="key" data-action="dot">.</button>
+      <button class="key eq" data-action="equals" aria-label="Equals">=</button>
+    </div>
+  </section>
+
+  <section class="tape" aria-label="Tape">
+    <h2>Tape</h2>
+    <p id="tape-empty">Finished sums land here.</p>
+    <ol id="tape" reversed></ol>
+  </section>
+
+  <p class="hint">Your keyboard works too: digits, <b>+ − * /</b>, Enter, Backspace, Escape to clear.</p>
+  <script src="calculator.js"></script>
+</main>
+</body>
+</html>
